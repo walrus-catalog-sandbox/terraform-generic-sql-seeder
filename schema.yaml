@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI schema for template terraform-sql-seeder
+components:
+  schemas:
+    variables:
+      required:
+      - dest
+      - src
+      type: object
+      properties:
+        context:
+          title: Context
+          type: object
+          description: |
+            Receive contextual information. When Walrus deploys, Walrus will inject specific contextual information into this field.
+
+            Examples:
+            ```
+            context:
+              project:
+                name: string
+                id: string
+              environment:
+                name: string
+                id: string
+              resource:
+                name: string
+                id: string
+            ```
+          default: {}
+          additionalProperties:
+            type: object
+            x-walrus-ui:
+              colSpan: 12
+          x-walrus-ui:
+            colSpan: 12
+            group: Basic
+            hidden: true
+            order: 1
+        src:
+          title: Source
+          type: string
+          description: |
+            Specify the seeding source address started with 'file://' or 'http(s)://' schema.
+
+            Example:
+            ```
+            https://raw.githubusercontent.com/seal-io/terraform-provider-byteset/main/byteset/testdata/mysql.sql
+            ```
+          x-walrus-ui:
+            group: Basic
+            order: 2
+        dest:
+          title: Destination
+          type: string
+          description: |
+            Specify the seeding destiantion address, which is a database connection string.
+
+            Example:
+            ```
+            mysql://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
+            maria|mariadb://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
+            postgres|postgresql://[username:[password]@][address][:port][/dbname][?param1=value1&...]
+            oracle://[username:[password]@][address][:port][/service][?param1=value1&...]
+            mssql|sqlserver://[username:[password]@][address][:port][/instance][?database=dbname&param1=value1&...]
+            ```
+          x-walrus-ui:
+            group: Basic
+            order: 3
+        execution_maximum_connection:
+          title: Execution Maximum Connection
+          type: number
+          description: |
+            Specify the maximum connection value during executing.
+          default: 5
+          x-walrus-ui:
+            group: Basic
+            order: 4
+        execution_batch_capacity:
+          title: Execution Batch Capacity
+          type: number
+          description: |
+            Specify the batch capacity value during executing.
+          default: 500
+          x-walrus-ui:
+            group: Basic
+            order: 5
+        salt:
+          title: Salt
+          type: string
+          description: |
+            Specify the salt for triggering a new seeding.
+          x-walrus-ui:
+            group: Basic
+            order: 6
