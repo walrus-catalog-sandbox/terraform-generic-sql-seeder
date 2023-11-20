@@ -1,6 +1,6 @@
-# SQL Seeder
+# Generic SQL Seeder
 
-Terrafrom module which seeds any RDS for Development or Testing, powered by [Seal/Byteset](https://registry.terraform.io/providers/seal-io/byteset/latest).
+Terraform module which seeds Relational Database for Development or Testing, like MySQL, PostgreSQL, MariaDB, etc., powered by [Seal/Byteset](https://registry.terraform.io/providers/seal-io/byteset/latest).
 
 ## Usage
 

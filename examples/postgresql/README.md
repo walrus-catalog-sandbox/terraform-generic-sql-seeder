@@ -1,6 +1,6 @@
 # PostgreSQL Example
 
-Seed postgresql by root module.
+Seed PostgreSQL by root module.
 
 ```bash
 # setup infra

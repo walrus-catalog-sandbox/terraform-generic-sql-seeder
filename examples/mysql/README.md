@@ -1,6 +1,6 @@
 # MySQL Example
 
-Seed mysql by root module.
+Seed MySQL by root module.
 
 ```bash
 # setup infra
