@@ -14,20 +14,6 @@ components:
           type: object
           description: |
             Receive contextual information. When Walrus deploys, Walrus will inject specific contextual information into this field.
-
-            Examples:
-            ```
-            context:
-              project:
-                name: string
-                id: string
-              environment:
-                name: string
-                id: string
-              resource:
-                name: string
-                id: string
-            ```
           default: {}
           additionalProperties:
             type: object
@@ -35,7 +21,7 @@ components:
               colSpan: 12
           x-walrus-ui:
             colSpan: 12
-            group: Basic
+            group: Advanced
             hidden: true
             order: 1
         src:
@@ -43,11 +29,6 @@ components:
           type: string
           description: |
             Specify the seeding source address started with 'file://' or 'http(s)://' schema.
-
-            Example:
-            ```
-            https://raw.githubusercontent.com/seal-io/terraform-provider-byteset/main/byteset/testdata/mysql.sql
-            ```
           x-walrus-ui:
             group: Basic
             order: 2
@@ -56,14 +37,14 @@ components:
           type: string
           description: |
             Specify the seeding destiantion address, which is a database connection string.
-
-            Example:
+           
+            The connection string format is:
             ```
-            mysql://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
-            maria|mariadb://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
-            postgres|postgresql://[username:[password]@][address][:port][/dbname][?param1=value1&...]
-            oracle://[username:[password]@][address][:port][/service][?param1=value1&...]
-            mssql|sqlserver://[username:[password]@][address][:port][/instance][?database=dbname&param1=value1&...]
+            - mysql://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
+            - maria|mariadb://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
+            - postgres|postgresql://[username:[password]@][address][:port][/dbname][?param1=value1&...]
+            - oracle://[username:[password]@][address][:port][/service][?param1=value1&...]
+            - mssql|sqlserver://[username:[password]@][address][:port][/instance][?database=dbname&param1=value1&...]
             ```
           x-walrus-ui:
             group: Basic
@@ -94,3 +75,7 @@ components:
           x-walrus-ui:
             group: Basic
             order: 6
+      x-walrus-ui:
+        groupOrder:
+        - Basic
+        - Advanced
