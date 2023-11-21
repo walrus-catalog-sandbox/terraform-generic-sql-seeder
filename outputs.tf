@@ -3,11 +3,6 @@ output "context" {
   value       = var.context
 }
 
-output "selector" {
-  description = "The selector, a map, which is used for dependencies or collaborations."
-  value       = []
-}
-
 output "id" {
   description = "The execution ID of the byteset pipeline."
   value       = byteset_pipeline.seeding.id
