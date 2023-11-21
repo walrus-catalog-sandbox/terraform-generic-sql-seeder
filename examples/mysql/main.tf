@@ -40,3 +40,19 @@ module "this" {
   src  = "https://raw.githubusercontent.com/seal-io/terraform-provider-byteset/main/byteset/testdata/mysql-lg.sql"
   dest = "mysql://root:password@tcp(localhost:3306)/"
 }
+
+output "context" {
+  value = module.this.context
+}
+
+output "refer" {
+  value = nonsensitive(module.this.refer)
+}
+
+output "id" {
+  value = module.this.id
+}
+
+output "timecost" {
+  value = module.this.timecost
+}

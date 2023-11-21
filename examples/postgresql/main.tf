@@ -41,3 +41,19 @@ module "this" {
   src  = "https://raw.githubusercontent.com/seal-io/terraform-provider-byteset/main/byteset/testdata/postgres-lg.sql"
   dest = "postgresql://root:password@localhost:5432?sslmode=disable"
 }
+
+output "context" {
+  value = module.this.context
+}
+
+output "refer" {
+  value = nonsensitive(module.this.refer)
+}
+
+output "id" {
+  value = module.this.id
+}
+
+output "timecost" {
+  value = module.this.timecost
+}

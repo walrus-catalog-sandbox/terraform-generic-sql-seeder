@@ -46,5 +46,10 @@ No inputs.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_context"></a> [context](#output\_context) | n/a |
+| <a name="output_refer"></a> [refer](#output\_refer) | n/a |
+| <a name="output_id"></a> [id](#output\_id) | n/a |
+| <a name="output_timecost"></a> [timecost](#output\_timecost) | n/a |
 <!-- END_TF_DOCS -->

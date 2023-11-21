@@ -62,6 +62,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_context"></a> [context](#output\_context) | The input context, a map, which is used for orchestration. |
+| <a name="output_refer"></a> [refer](#output\_refer) | The refer, a map, which is used for dependencies or collaborations. |
 | <a name="output_id"></a> [id](#output\_id) | The execution ID of the byteset pipeline. |
 | <a name="output_timecost"></a> [timecost](#output\_timecost) | The execution timecost of the byteset pipeline. |
 <!-- END_TF_DOCS -->
