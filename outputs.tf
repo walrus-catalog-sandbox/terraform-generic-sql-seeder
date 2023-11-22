@@ -13,7 +13,8 @@ output "refer" {
   value = {
     schema = "generic:sql:seeder"
     params = {
-      id = byteset_pipeline.seeding.id
+      selector = {}
+      id       = byteset_pipeline.seeding.id
     }
   }
 }
