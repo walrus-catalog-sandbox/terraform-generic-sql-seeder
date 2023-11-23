@@ -15,6 +15,7 @@ components:
           description: |
             Receive contextual information. When Walrus deploys, Walrus will inject specific contextual information into this field.
           default: {}
+          nullable: true
           additionalProperties:
             type: object
             x-walrus-ui:
@@ -55,6 +56,8 @@ components:
           description: |
             Specify the maximum connection value during executing.
           default: 5
+          minimum: 1
+          nullable: true
           x-walrus-ui:
             group: Basic
             order: 4
@@ -64,12 +67,15 @@ components:
           description: |
             Specify the batch capacity value during executing.
           default: 500
+          minimum: 1
+          nullable: true
           x-walrus-ui:
             group: Basic
             order: 5
         salt:
           title: Salt
           type: string
+          nullable: true
           description: |
             Specify the salt for triggering a new seeding.
           x-walrus-ui:
