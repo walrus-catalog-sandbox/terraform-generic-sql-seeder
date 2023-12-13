@@ -4,10 +4,10 @@ info:
 components:
   schemas:
     variables:
+      type: object
       required:
       - dest
       - src
-      type: object
       properties:
         context:
           title: Context
@@ -38,7 +38,7 @@ components:
           type: string
           description: |
             Specify the seeding destiantion address, which is a database connection string.
-           
+
             The connection string format is:
             ```
             - mysql://[username:[password]@]tcp([address][:port])[/dbname][?param1=value1&...]
@@ -56,8 +56,8 @@ components:
           description: |
             Specify the maximum connection value during executing.
           default: 5
-          minimum: 1
           nullable: true
+          minimum: 1
           x-walrus-ui:
             group: Basic
             order: 4
@@ -67,17 +67,17 @@ components:
           description: |
             Specify the batch capacity value during executing.
           default: 500
-          minimum: 1
           nullable: true
+          minimum: 1
           x-walrus-ui:
             group: Basic
             order: 5
         salt:
           title: Salt
           type: string
-          nullable: true
           description: |
             Specify the salt for triggering a new seeding.
+          nullable: true
           x-walrus-ui:
             group: Basic
             order: 6
