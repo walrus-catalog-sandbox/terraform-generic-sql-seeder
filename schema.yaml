@@ -40,7 +40,6 @@ components:
           description: |
             Specify the maximum connection value during executing.
           default: 5
-          nullable: true
           minimum: 1
           x-walrus-ui:
             group: Basic
@@ -51,7 +50,6 @@ components:
           description: |
             Specify the batch capacity value during executing.
           default: 500
-          nullable: true
           minimum: 1
           x-walrus-ui:
             group: Basic
@@ -61,7 +59,6 @@ components:
           type: string
           description: |
             Specify the salt for triggering a new seeding.
-          nullable: true
           x-walrus-ui:
             group: Basic
             order: 6
